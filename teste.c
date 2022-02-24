@@ -3,9 +3,7 @@
 
 int main(void)
 {
-    char *small = "tripadvisor_hotel_reviews.csv";
-    printf("linha 6");
-    FILE* fp = fopen(small, "r");
-    printf("linha 8");
-    aglutina(fp, small);
+    char *arquivo = "tripadvisor_hotel_reviews.csv";
+    FILE* fp = fopen(arquivo, "r");
+    aglutina(fp, arquivo);
 }
