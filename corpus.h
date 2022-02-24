@@ -19,11 +19,6 @@
 //declaracao das funcoes
 void cria_arquivos();
 void aglutina(FILE *f, char *nome_do_arquivo);
-<<<<<<< Updated upstream
-
-#endif
-=======
 void cria_vet(FILE *f, char *nome_do_arquivo);
 
 #endif
->>>>>>> Stashed changes

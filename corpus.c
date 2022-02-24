@@ -54,11 +54,24 @@ void aglutina(FILE *f, char *nome_do_arquivo){
 
 void cria_vet(FILE *f, char *nome_do_arquivo)
 {
- 
+    
+    char *p;// criando um ponteiro ara vetor
     char name;
-    char *p1, *p2;
     int qtd =14966022;
+    int contador = 0;
 
+    //alocando memoria para o vetor
+    p = (char*)(malloc(qtd*sizeof(char)));
+
+    //verificando o arqiuvo
+    if (p==NULL)
+    {
+        printf("\nErro de alocacao de memoria.");
+        syste("pause";
+        exit(1);
+    }
+
+    //leitura do arquivo
     f = fopen(nome_do_arquivo, "r");
     
     if (f == NULL)
@@ -74,10 +87,23 @@ void cria_vet(FILE *f, char *nome_do_arquivo)
     {   
         //faz a leitura do caracter no arquivo apontado por f
         name = fgetc(f);
+
         //exibindo o caracterer na tela  
         printf("%c",name);
 
+        //verificando a variavel
+        if (name != ","  ||  "."  ||  "?"  || "!" "")
+        {
+
+        }
+        
+
+        //calculando quantidade de caracteres
+        contador +=1;
     }while(name!=EOF); // enquanto não for final de arquivo
+
+    printf("A quantidade de caracteres é: %d", contador);
+
     fclose(f); // fechando o arquivo
     system("pause"); //somente para windows
 
