@@ -1,4 +1,5 @@
 //BIBLIOTECA DE MANIPULAÇÃO DOS ARQUIVOS TXT CRIADOS
+#include "corpus.h"
 #include <stdio.h>
 #include <string.h>
 

@@ -1,6 +1,8 @@
 //ta escrito alguma coisa?
 //o arquivo existe?
 //BIBLIOTECA DE MANIPULAÇÃO DO ARQUIVO CSV
+
+#include "arq.h"
 #include <string.h>
 #include <unistd.h>
 
