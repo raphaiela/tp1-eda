@@ -1,5 +1,5 @@
 //arquivo temporário para testar funções
-#include "manipula_corpus.h"
+#include "corpus.h"
 
 int main(void)
 {
