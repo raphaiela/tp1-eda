@@ -9,8 +9,8 @@ void cria_arquivos(){
     FILE *fp = NULL;
     fp = fopen("Nota1.txt" ,"w");
     fp = fopen("Nota2.txt" ,"w");
-    fp = fopen("Nota3.txt" ,"w");
-    fp = fopen("Nota4.txt" ,"w");
+    fp = fopen("Nota3.txt" ,"w"); 
+    fp = fopen("Nota4.txt" ,"w"); 
     fp = fopen("Nota5.txt" ,"w");
 }
 
@@ -49,4 +49,36 @@ void aglutina(FILE *f, char *nome_do_arquivo){
   
             printf("\n");
         }
+}
+
+
+void cria_vet(FILE *f, char *nome_do_arquivo)
+{
+ 
+    char name;
+    char *p1, *p2;
+    int qtd =14966022;
+
+    f = fopen(nome_do_arquivo, "r");
+    
+    if (f == NULL)
+    {
+        printf("Erro ao tentar abrir o arquivo!");
+        system("pause");
+        exit(1);// saindo do programa
+    }
+    printf("Lendo e exibindo dados do arquivo \n\n");
+
+
+    do // faça
+    {   
+        //faz a leitura do caracter no arquivo apontado por f
+        name = fgetc(f);
+        //exibindo o caracterer na tela  
+        printf("%c",name);
+
+    }while(name!=EOF); // enquanto não for final de arquivo
+    fclose(f); // fechando o arquivo
+    system("pause"); //somente para windows
+
 }
