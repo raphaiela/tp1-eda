@@ -52,27 +52,15 @@ void aglutina(FILE *f, char *nome_do_arquivo){
         }
 }
 
-
+//funcao3
 void cria_vet(FILE *f, char *nome_do_arquivo)
 {
 
-    char *p;// criando um ponteiro ara vetor
-    char name;
+    //variaveis auxiliares
     int qtd =14966022;
-    int contador = 0;
+    int contador1 = 0, contador2 = 0;
 
-    //alocando memoria para o vetor
-    p = (char*)(malloc(qtd*sizeof(char)));
-
-    //verificando o arqiuvo
-    if (p==NULL)
-    {
-        printf("\nErro de alocacao de memoria.");
-        system("pause");
-        exit(1);
-    }
-
-    //leitura do arquivo
+    //variavel de leitura do arquivo
     f = fopen(nome_do_arquivo, "r");
 
     if (f == NULL)
@@ -83,28 +71,24 @@ void cria_vet(FILE *f, char *nome_do_arquivo)
     }
     printf("Lendo e exibindo dados do arquivo \n\n");
 
-    do // faça
-    {
-        //faz a leitura do caracter no arquivo apontado por f
-        name = fgetc(f);
-        //exibindo o caracterer na tela
-        printf("%c", name);
-
+    //percorrendo,filtrando e contando caracteres
     unsigned int c;
     while( EOF != (c =(unsigned)fgetc(f) ) )
     {
         if( (isalpha(c) || isblank(c) ) && !ispunct(c) ) // a...z ou A...Z ou espaço
         {
+            //printando os caracteres filtrados
             printf("%c", c);
+            //calculando quantidade de caracteres
+            contador1 +=1;
         }
+        contador2 += contador1;
     }
-        //calculando quantidade de caracteres
-    contador +=1;
-    }while(name!=EOF); // enquanto não for final de arquivo
 
-    printf("A quantidade de caracteres é: %d", contador);
+    printf("\nA quantidade de caracteres é: %d\n", contador2);
 
     fclose(f); // fechando o arquivo
     system("pause"); //somente para windows
+
 
 }

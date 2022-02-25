@@ -4,13 +4,15 @@
 int main(void)
 {
 
-    char *arquivo = "tripadvisor_hotel_reviews.csv";
+    /*
+    char *arquivo = "dataset.csv";S
     FILE* fp = fopen(arquivo, "r");
-    // aglutina(fp, arquivo);
+    aglutina(fp, arquivo);
+    */
 
-    char *arquivo2 = "Notas1.txt";
+    char *arquivo2 = "Nota5.txt";
     FILE* fp2 = fopen(arquivo2, "r");
-    cria_vet(fp,arquivo);
+    cria_vet(fp2,arquivo2);
 
     return 0;
 
